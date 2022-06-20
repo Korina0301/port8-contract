@@ -15,4 +15,4 @@
 | ------ | ------ |
 | narancasta | zuta,crvena |
 | ljubicasta | plava,crvena |
-| zelena | zuta,zelena |
+| zelena | zuta,plava |
