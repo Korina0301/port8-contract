@@ -3,3 +3,8 @@
 ## radit cemo u :
 - html
 - css
+### color:
+> red
+> blue
+> black
+> orange
