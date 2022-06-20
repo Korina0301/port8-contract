@@ -5,10 +5,10 @@
 - css
 ### color:
 
->  red
->  blue
->  black
->  orange
+> red
+> blue
+> black
+> orange
 
 ### tabela boja
 | Boje | Od kojih se boja sastoje |
