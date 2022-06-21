@@ -1,0 +1,43 @@
+.glavni  {
+    height: 1000px;
+    width: 350px;
+    margin: 0 auto;
+    background-color: gray;
+    padding: 20px;
+}
+.crveno {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.zuto {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.zeleno {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.crveno:hover {
+    background-color: red;
+}
+.zuto:hover {
+    background-color: yellow;
+}.zeleno:hover {
+    background-color: green;
+}
+table {
+    border: 1px solid black;
+    
+}

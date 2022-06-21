@@ -1,0 +1,35 @@
+.picture{
+    text-align: center;
+}
+.picture img {
+    height: 100px;
+}
+.space{
+    height: 50px;
+}
+.prvit{
+font-weight: bold;
+font-size: 40px;
+}
+.paragraf {
+ width: 40%; 
+ height:300px;
+  margin-left: 60%;
+   color:gray; 
+   font-size: 15px;"
+}
+.bold-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+.small-text {
+    font-size: 15px;
+    font-weight: normal;
+}
+ table ,tr ,td {
+    border: 0.5px black solid;
+    border-spacing: 0;
+}
+p {
+    margin: 0;
+}
