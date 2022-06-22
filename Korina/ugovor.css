@@ -13,10 +13,10 @@ font-size: 40px;
 }
 .paragraf {
  width: 40%; 
- height:300px;
+ height:128px;
   margin-left: 60%;
-   color:gray; 
-   font-size: 15px;"
+   color:rgb(49, 45, 45); 
+   font-size: 17px;"
 }
 .bold-text {
     font-weight: bold;
@@ -31,5 +31,14 @@ font-size: 40px;
     border-spacing: 0;
 }
 p {
-    margin: 0;
+    margin: 1px;
+}
+hr {
+    float: left;
+}
+.no-border tr td , .no-border{
+    border: 0;
+}
+h1 {
+margin: 5px;
 }
