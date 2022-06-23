@@ -37,7 +37,17 @@
 }.zeleno:hover {
     background-color: green;
 }
-table {
+table , table tr td{
     border: 1px solid black;
+    border-spacing: 0;
     
+}
+.end {
+    width: 300px;
+    height: 500px;
+    background-color: rgb(103, 48, 48);
+    margin-top: 20px;
+}
+.end:hover {
+    background-color: rgb(255, 132, 0);
 }
