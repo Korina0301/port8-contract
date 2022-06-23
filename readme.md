@@ -9,6 +9,10 @@
 > blue
 > black
 > orange
+> yellow
+> pink
+> white
+> purple
 
 ### tabela boja
 | Boje | Od kojih se boja sastoje |
