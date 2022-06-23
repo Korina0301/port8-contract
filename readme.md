@@ -5,14 +5,14 @@
 - css
 ### color:
 
-> red 
-> blue 
-> black 
-> orange 
-> yellow 
-> pink 
-> white 
-> purple 
+```sh
+red
+yellow
+black
+pink
+purple
+```
+
 
 ### tabela boja
 | Boje | Od kojih se boja sastoje |
