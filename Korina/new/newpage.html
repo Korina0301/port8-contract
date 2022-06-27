@@ -41,11 +41,32 @@
         a:hover{
             font-weight: bold;
         }
+        @media screen and (max-width: 667px) {
+            body{
+                box-sizing: content-box;
+                font-size: 10px;
+            }
+            .navv{height: 100px !important; width: 60% !important;}
+            .nav{font-size: 8px !important;}
+            .capella{font-size: 20px !important;padding: 20px !important;}
+            .projekt{margin-top: -440px !important; position: relative;}
+            .bezug{font-size: 10px !important;}
+            .slika{margin-top: -335px !important;}
+            #projekt {height: 450px !important;}
+            .small{height: 290px !important;font-size: 20px !important;}
+            #lage{margin-top: 0px !important;}
+            .razmak{height: 50px !important;}
+            .green tr,  .green {width: 100% !important;font-size: 10px !important;padding: 0px !important;}
+            .green img{width:20% !important;}
+            #kontakt table tr td {width: 100% !important;font-size: 9px !important;padding: 0px !important;}
+             #kontakt img {width: 100% !important;}
+
+        }
  
     </style>
 </head>
 <body>
-    <div style="width:560px;height:150px;float: right;">
+    <div class="navv" style="width:560px;height:150px;float: right;">
         <a class="nav" href="#projekt">Projekt</a>
         <a class="nav" href="#wohnen">Wohnen</a>
         <a class="nav" href="#lage">Lage</a>
@@ -57,7 +78,7 @@
 
     <div id="projekt" style="width:100%; height:500px; background-color:#2b2e2d; display: inline-block;">
         <div style="width:90% ;height:90%;background-color:white; margin: 35px 4.5%;">
-        <div style="color:white ; background-color:#6b8179; width:50%;padding: 2px 10px;font-size: 20px;font-weight: 100;" ><h1>BEZUG Herbst 2022</h1></div>
+        <div class="bezug" style="color:white ; background-color:#6b8179; width:50%;padding: 2px 10px;font-size: 20px;font-weight: 100;" ><h1>BEZUG Herbst 2022</h1></div>
         <div style="padding:2px 10px; width:45%;"><h1 style="color: #2b2e2d;">Bauprojekt</h1><h1 style="color:#6b8179;">Obsthalden</h1> Auf Baurechtsland der Stat Zürich entsteht eine Siedlung mit
             ca. 140 Wohnungen. Der Mietermix soll dem Quartier <br>
             entsprechen und daher verschiedene Altersgruppen,<br>
@@ -66,29 +87,29 @@
             Infrastruktur für das Quarter zur Verfügung. Der Neubau wird <br>
             nach Minergie -Eco sowie dem Standard Nachhaltiges Bauen <br>
             Schweiz (SNBS) zertifiziert.</div>
-        <div style="float:right ;width: 50%;margin-top: -390px;"><img style="width:100% ;float:right;margin-top: 0;" src="slika.png" alt=""></div>
-        <div style="padding:2px 10px; margin-top: -510px;background-color: white;"><span style="color:#6b8179 ; font-size: 40px;">Projekt</span> <span style=" font-size:40px;color:#2b2e2d ;">2020</span><br> <br>
+        <div class="slika" style="float:right ;width: 50%;margin-top: -390px;"><img style="width:100% ;float:right;margin-top: 0;" src="slika.png" alt=""></div>
+        <div class="projekt" style="padding:2px 10px; margin-top: -510px;background-color: white;"><span style="color:#6b8179 ; font-size: 40px;">Projekt</span> <span style=" font-size:40px;color:#2b2e2d ;">2020</span><br> <br>
             I Frühling 2020 beginnt nach der fachgerechten gel- und Amphibiensuche auf dem Areal die Schadstoffsanierung der <br>
             bestehenden Bauten. Die Baufreigabe wird auf Sommer 2020 erwartet, dan können auch die Abbrucharbeiten beginnen. <br>
             Danach sollen die Arbeiten am Aushub starten. </div>
     </div>
     </div>
-    <div id="wohnen" style="height:150px ;"></div>
+    <div id="wohnen" class="razmak" style="height:150px ;"></div>
     <div style="width:100%; height:600px; display: inline-block;">
         <div style="float:left; width: 49%;">
-            <div style="float:right;width:50%; height: 600px;">
+            <div class="small" style="float:right;width:50%; height: 600px;">
                 <img width="100%" height="40%"  src="jedan.jpg" alt="">
                 <img width="100%" height="60%" src="dva.jpg" alt="">
             </div>
-            <div style="float:left;width:49%; height: 600px;">
+            <div class="small"  style="float:left;width:49%; height: 600px;">
                 <img width="100%" height="60%" src="tri.jpg" alt="">
                 <img width="100%" height="40%" src="cetiri.jpg" alt="">
             </div>
 
         </div>
-        <div id="lage" style="float:right; width: 45%; margin-top: 10%;">
-           <span style="font-size: 40px; color:#2b2e2d"> Ankommen und</span> <br>
-            <span style="font-size: 40px; color:#6b8179">Wohlfühlen</span> <br>
+        <div  id="lage" style="float:right; width: 45%; margin-top: 10%;">
+           <span class="small"  style="font-size: 40px; color:#2b2e2d"> Ankommen und</span> <br>
+            <span class="small"  style="font-size: 40px; color:#6b8179">Wohlfühlen</span> <br>
 Ein Team von Innenarchitekten, das sich speziell dem <br>
 Projekt Parc des Crêts widmet, hat sorgfältig und <br>
 fachmännisch hochwertige Oberflächen und Materialien <br>
@@ -103,8 +124,8 @@ Sie, um Sie bestmöglich zu beaten und die ideale <br>
 Unterkunft für Sie und Ihre Familie zu schaffen. <br>
   </div>
     </div>
-    <div style="height:150px ;"></div>
-    <table >
+    <div class="razmak" style="height:150px ;"></div>
+    <table class="green" style="width:100% ;">
         <tr >
             <td style="width:20%; padding: 30px;"><img src="infrastruktur.png" alt=""></td>
             <td style="width:20%;padding: 30px;"><img src="schulen.png" alt=""></td>
