@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator</title>
+    <style>
+        body {
+            font-family:'Thin';
+            font-weight: 100;
+        }
+        .calculator {
+            width: 600px;
+            height: 957px;
+            margin: 100px auto;
+            box-shadow: 10px 10px 35px gray;
+        }
+        .black-line {
+            width: 100%;
+            height: 250px;
+            background-color: black;
+            border-bottom: #3B6267 2px solid;
+        }
+        .black-line {
+            width: 600px;
+            height: 200px;
+            font-size: 100px;
+            text-align: right;
+            color: white;
+            line-height: 200px;
+        }
+        .grey-block {
+            width: 148px;
+            height: 150px;
+            color: black;
+            font-size: 70px;
+            background-color: #BBB8C0;
+            display: block;
+            float: left;
+            text-align: center;
+            line-height: 150px;
+            border-right: #3B6267 solid 2px;
+            transition: 0.5s;
+        }
+        .orange-block {
+            width: 150px;
+            height: 150px;
+            color: white;
+            font-size: 70px;
+            background-color: #FF7D00;
+            display: block;
+            float: right;
+            text-align: center;
+            line-height: 150px;
+            border-bottom: #3B6267 solid 2px;
+            transition: 0.5s;
+        }
+        .grey-blockk {
+            width: 148px;
+            height: 150px;
+            color: black;
+            font-size: 70px;
+            background-color: #D9D8E2;
+            display: block;
+            float: left;
+            text-align: center;
+            line-height: 150px;
+            border-top: #3B6267  solid 2px;
+            border-right: #3B6267  solid 2px;
+            transition: 0.5s;
+        }
+        .grey-blockkk {
+            width: 298px;
+            height: 150px;
+            color: black;
+            font-size: 70px;
+            background-color: #D9D8E2;
+            display: block;
+            float: left;
+            text-align: center;
+            line-height: 150px;
+            border-top: #3B6267  solid 2px;
+            border-right: #3B6267  solid 2px;
+            transition: 0.5s;
+        }
+        .grey-block:hover {
+            background-color: #7B787F;
+            cursor: pointer;
+        }
+        .grey-blockk:hover {
+            background-color: #717173;
+            cursor: pointer;
+        }
+        .grey-blockkk:hover {
+            background-color: #717173;
+            cursor: pointer;
+        }
+        .orange-block:hover {
+            background-color: #AD5401;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="black-line" id="rezultat"></div>
+        <div class="line">
+            <div class="grey-block" id="ac">AC</div>
+            <div class="grey-block">±</div>
+            <div class="grey-block" id="postotak">%</div>
+            <div class="orange-block" id="djeljeno">:</div>
+        </div>
+        <div class="line">
+            <div class="grey-blockk" id="seven">7</div>
+            <div class="grey-blockk" id="eight">8</div>
+            <div class="grey-blockk" id="nine">9</div>
+            <div class="orange-block" id="puta">x</div>
+        </div>
+        <div class="line">
+            <div class="grey-blockk" id="four">4</div>
+            <div class="grey-blockk" id="five">5</div>
+            <div class="grey-blockk" id="six">6</div>
+            <div class="orange-block" id="minus">-</div>
+        </div>
+        <div class="line">
+            <div class="grey-blockk" id="one">1</div>
+            <div class="grey-blockk" id="two">2</div>
+            <div class="grey-blockk" id="three">3</div>
+            <div class="orange-block" id="zbroj">+</div>
+        </div>
+        <div class="line">
+            <div class="grey-blockkk" id="zero">0</div>
+            <div class="grey-blockk" id="tocka" >.</div>
+            <div class="orange-block" id="jednako" style="border:0;">=</div>
+        </div>
+    </div>
+    <script>
+        // varijable
+
+
+        var tocka=document.getElementById("tocka")
+        var zero = document.getElementById("zero")
+        var one = document.getElementById("one")
+        var two = document.getElementById("two")
+        var three = document.getElementById("three")
+        var four = document.getElementById("four")
+        var five = document.getElementById("five")
+        var six = document.getElementById("six")
+        var seven = document.getElementById("seven")
+        var eight = document.getElementById("eight")
+        var nine = document.getElementById("nine")
+        var rezultat = document.getElementById("rezultat")
+        var zbroj = document.getElementById("zbroj")
+        var izracun = document.getElementById("jednako")
+        var minus=document.getElementById("minus")
+        var izbrisi=document.getElementById("ac")
+        var djeljeno=document.getElementById("djeljeno")
+        var puta=document.getElementById("puta")
+
+
+        // Spremnici
+        var prviSpremnik = ""
+        var drugiSpremnik = ""
+        var akcija = ""
+
+        // plus,minus,djeljeno,puta,jednako...
+        zbroj.onclick = function (e) {
+            prviSpremnik = rezultat.innerHTML;
+            rezultat.innerHTML = ""
+            akcija = "+"
+        }
+        minus.onclick = function (e) {
+            prviSpremnik = rezultat.innerHTML;
+            rezultat.innerHTML = ""
+            akcija = "-"
+        }
+        djeljeno.onclick=function(e){
+            prviSpremnik=rezultat.innerHTML;
+            rezultat.innerHTML=""
+            akcija=":"
+        }
+        puta.onclick=function(e){
+            prviSpremnik=rezultat.innerHTML;
+            rezultat.innerHTML=""
+            akcija="*"
+        }
+        izracun.onclick = function (e) {
+            drugiSpremnik = rezultat.innerHTML;
+            // Zbrojiti
+            praviBrojprvi = parseFloat(prviSpremnik)
+            praviBrojdrugi = parseFloat(drugiSpremnik)
+            if (akcija == "+") {
+                rezultat.innerHTML = praviBrojprvi + praviBrojdrugi
+                prviSpremnik=rezultat.innerHTML
+            }
+            if (akcija == "-") {
+                rezultat.innerHTML = praviBrojprvi - praviBrojdrugi
+                prviSpremnik=rezultat.innerHTML
+            }
+            if (akcija == ":") {
+                rezultat.innerHTML = praviBrojprvi / praviBrojdrugi 
+                prviSpremnik=rezultat.innerHTML
+            }
+            if(akcija == "*"){
+                rezultat.innerHTML = praviBrojprvi * praviBrojdrugi
+                prviSpremnik=rezultat.innerHTML
+            }
+        }
+        izbrisi.onclick=function(e){
+            drugiSpremnik=""
+            prviSpremnik=""
+            akcija=""
+            rezultat.innerHTML=""
+        }
+
+        // brojevi 
+
+        tocka.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var tockaa=tocka.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + tockaa ;
+        }
+        zero.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var nula=zero.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + nula;
+        }
+
+        one.onclick = function (e) {
+            // Provjeriti da li ima previse brojeva
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var jedan = one.innerHTML
+            starirezultat = rezultat.innerHTML
+            rezultat.innerHTML = starirezultat + jedan;
+        }
+        two.onclick = function (e) {
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var dva = two.innerHTML
+            starirezultat = rezultat.innerHTML
+            rezultat.innerHTML = starirezultat + dva;
+        }
+        three.onclick = function (e) {
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var tri = three.innerHTML
+            starirezultat = rezultat.innerHTML
+            rezultat.innerHTML = starirezultat + tri;
+        }
+        four.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var cetiri=four.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + cetiri;
+        }
+        five.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var pet=five.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + pet;
+        }
+        six.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var sest=six.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + sest;
+        }
+        seven.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var sedam=seven.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + sedam;
+        }
+        eight.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var osam=eight.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + osam;
+        }
+        nine.onclick=function(e){
+            if (rezultat.innerHTML.length > 5) {
+                return
+            }
+            var devet=nine.innerHTML
+            starirezultat=rezultat.innerHTML
+            rezultat.innerHTML=starirezultat + devet;
+        }
+    </script>
+</body>
+</html>

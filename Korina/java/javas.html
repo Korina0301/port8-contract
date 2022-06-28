@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rezultat{
+            font-size: 64px;
+            color: magenta;
+            font-weight: 700;
+        }
+        #prvibroj, #drugibroj{
+            font-size: 32px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>prvi broj je</h2>
+    <p id="prvibroj">5</p>
+    <h2>drugi broj je</h2>
+    <p id="drugibroj">2</p>
+    <hr>
+    <h1>matematicke radnje</h1>
+     <button id="zbroji">zbroji</button>
+     <button>oduzmi</button>
+    <hr>
+    <h1 >rezultat je</h1>
+    <p id="rezultat"> 7</p>
+    <script>
+        // ovo su moje varijable.
+        var prvibroj=document.getElementById("prvibroj")
+        var drugibroj=document.getElementById("drugibroj")
+        var rezultat=document.getElementById("rezultat")
+        // ovdje je logika racunanja.
+        console.log(prvibroj.innerHTML)
+        console.log(drugibroj.innerHTML)
+
+        //prvo dohvatiti element.
+        var tipkazbroji=document.getElementById("zbroji")
+        tipkazbroji.onclick=function(e){
+            var prvi=prvibroj.innerHTML;
+            var drugi=drugibroj.innerHTML;
+            rezultat.innerHTML=prvi + drugi;
+        }
+
+
+    </script>
+
+</body>
+</html>
